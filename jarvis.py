@@ -50,4 +50,5 @@ def takeCommand():
 
 
 if __name__ == "__main__":
-    speak("harry is a good boy")
+    wishMe()
+    takeCommand()
