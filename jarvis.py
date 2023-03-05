@@ -8,6 +8,13 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
 
-# You can select any voice out of two.
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+
+# print how many voices available.
 # voices = engine.getProperty('voices')
 # print(voices)
+if __name__ == "__main__":
+    speak("harry is a good boy")
