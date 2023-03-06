@@ -36,7 +36,9 @@ def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening....")
-        r.pause_threshold = 1
+        r.pause_threshold = 0.6
+        r.energy_threshold = 600
+
         audio = r.listen(source)
     try:
         print("Recognizing....")
