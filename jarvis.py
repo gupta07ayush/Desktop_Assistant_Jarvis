@@ -98,3 +98,8 @@ if __name__ == "__main__":
             CurrentTime = datetime.datetime.now().strftime("%H:%M")
             print(CurrentTime)
             speak(f"Sir, the time is {CurrentTime}")
+
+        # Open App
+        elif "open code" in query:
+            codePath = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
