@@ -82,3 +82,13 @@ if __name__ == "__main__":
             webbrowser.open("linkedin.com/in/gupta07ayush")
         elif 'open silver github' in query:
             webbrowser.open("github.com/AayushSilarpuria")
+
+        # Play Music
+        elif 'play music' in query:
+            music_dir = "C:\\Users\\gupta\\OneDrive\\Desktop\\songs"
+            songs = os.listdir(music_dir)
+            songs_obj = (enumerate(songs, 1))
+            for song in songs_obj:
+                print((song))
+            shuffle_no = random.randint(0, len(songs))
+            os.startfile(os.path.join(music_dir, songs[shuffle_no]))
