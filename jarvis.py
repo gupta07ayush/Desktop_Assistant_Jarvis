@@ -103,3 +103,8 @@ if __name__ == "__main__":
         elif "open code" in query:
             codePath = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
+
+        # Exit loop
+        elif 'baby exit' in query:
+            print("Exiting the program")
+            exit()
