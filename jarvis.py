@@ -92,3 +92,9 @@ if __name__ == "__main__":
                 print((song))
             shuffle_no = random.randint(0, len(songs))
             os.startfile(os.path.join(music_dir, songs[shuffle_no]))
+
+        # Current Time
+        elif 'the time' in query:
+            CurrentTime = datetime.datetime.now().strftime("%H:%M")
+            print(CurrentTime)
+            speak(f"Sir, the time is {CurrentTime}")
