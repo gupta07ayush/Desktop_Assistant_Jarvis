@@ -2,6 +2,7 @@ import pyttsx3
 import datetime
 import speech_recognition as sr
 import wikipedia
+import webbrowser
 
 # sapi5 is a windows api which provides speech functions
 engine = pyttsx3.init('sapi5')
@@ -65,3 +66,14 @@ if __name__ == "__main__":
             speak("According to wikipedia..")
             print(results)
             speak(results)
+
+        elif 'open youtube' == query:
+            webbrowser.open('youtube.com')
+        elif 'open google' == query:
+            webbrowser.open("google.com")
+        elif 'open insta' == query:
+            webbrowser.open("instagram.com")
+        elif 'open github' == query:
+            webbrowser.open("github.com/gupta07ayush")
+        elif 'open linkedin' == query:
+            webbrowser.open("linkedin.com/in/gupta07ayush")
