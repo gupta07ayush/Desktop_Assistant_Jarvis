@@ -1,6 +1,7 @@
 import pyttsx3
 import datetime
 import speech_recognition as sr
+import wikipedia
 
 # sapi5 is a windows api which provides speech functions
 engine = pyttsx3.init('sapi5')
@@ -38,7 +39,6 @@ def takeCommand():
         print("Listening....")
         r.pause_threshold = 0.6
         r.energy_threshold = 600
-
         audio = r.listen(source)
     try:
         print("Recognizing....")
@@ -48,9 +48,20 @@ def takeCommand():
     except Exception as e:
         # print(e)
         print("Say that again please")
-        return "None"
+        return 'None'
+    return query
 
 
 if __name__ == "__main__":
-    wishMe()
-    takeCommand()
+    # wishMe()
+    while True:
+        query = takeCommand().lower()
+
+        # logic for executing tasks based on query
+        if 'wikipedia' in query:
+            speak("Searching Wikipedia....")
+            query = query.replace('wikipedia', '')
+            results = wikipedia.summary(query, sentences=1)
+            speak("According to wikipedia..")
+            print(results)
+            speak(results)
