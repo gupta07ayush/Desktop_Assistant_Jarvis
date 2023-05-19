@@ -11,3 +11,6 @@ import webbrowser
 import os
 import random
 ```
+```
+pip install wikipedia
+```
