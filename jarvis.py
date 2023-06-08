@@ -64,10 +64,14 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak("Searching Wikipedia....")
             query = query.replace('wikipedia', '')
-            results = wikipedia.summary(query, sentences=1)
+            results = wikipedia.summary(query, sentences=2)
             speak("According to wikipedia..")
             print(results)
             speak(results)
+
+        # Introduction of Jarvis
+        elif 'are you' or 'your name' in query:
+            speak("Hello I am Jarvis developed by Ayush Gupta")
 
         # open websites
         elif 'open youtube' in query:
